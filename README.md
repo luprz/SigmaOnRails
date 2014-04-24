@@ -1,4 +1,4 @@
 SigmaOnRails
 ============
 
-Sistem de Gestión de Mantenimiento
+Sistema de Gestión de Mantenimiento
