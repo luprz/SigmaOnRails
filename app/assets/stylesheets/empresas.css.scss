@@ -1,0 +1,49 @@
+// Place all the styles related to the Empresas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "twitter/bootstrap";
+
+.user-table{
+	width: 100%;
+}
+
+.user-table > thead > tr > th{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background: #f2f2f2;
+}
+
+.user-table > tbody > tr > td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.user-table > tbody > tr:hover{
+	background-color: #E0F8EC;
+}
+
+.btn-table{
+	background-color: #E9E9E9;
+	box-shadow: 0px 2px 1px #c0c0c0;
+	color: #000;
+}
+
+.btn-table:hover{
+	background-color: #E9E9E9;
+	box-shadow: 0px 2px 1px #c0c0c0;
+	color: #000;
+}
+
+.container-form{
+	padding: 20px;
+}
+
+.input-form{
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 2px 1px #c0c0c0;
+	background-color: #F2F2F2;
+	padding: 5px;
+	width: 100%;
+}

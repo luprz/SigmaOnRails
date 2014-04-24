@@ -1,0 +1,52 @@
+.container
+  .row
+    .col-lg-3.col-md-3.col-sm-4
+      .container-login#user-controls
+        .modal-header.title-login
+          %h3 
+            %i.fa.fa-gear
+            Clientes
+        .row
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-right: 0px;"}
+            %center              
+              = link_to "<i class='fa fa-home fa-3x'></i>".html_safe, root_path, :class=>"btn btn-control"              
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-left: 0px;border-left:1px solid #c0c0c0;"}
+            %center
+              = link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, empresas_path, :class=>"btn btn-control"
+        .row
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-right: 0px;"}
+            %center              
+              = link_to "<i class='fa fa-pencil fa-3x'></i>".html_safe, edit_empresa_path(@empresa), :class=>"btn btn-control"              
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-left: 0px;border-left:1px solid #c0c0c0;"}
+            %center
+              = link_to "<i class='fa fa-trash-o fa-3x'></i>".html_safe,  empresa_path, :method => :delete, :data => { :confirm => '¿Esta seguro que desea eliminar este registro?' }, :class=>"btn btn-control"
+        .modal-footer.footer-login
+    .col-lg-9.col-md-9.col-sm-8
+      .container-login#user-container
+        .modal-header.title-login
+          %h2.hidden-xs 
+            %i.fa.fa-user
+            Lista de Empresas Clientes
+          %h2.visible-xs 
+            %i.fa.fa-user
+            Clientes
+        %p#notice= notice
+
+        %p
+          %b Nombre:
+          = @empresa.nombre
+        %p
+          %b Rif:
+          = @empresa.rif
+        %p
+          %b Direccion:
+          = @empresa.direccion
+        %p
+          %b Telefono:
+          = @empresa.telefono
+        %p
+          %b Email:
+          = @empresa.email
+
+        .modal-footer.footer-login
+

@@ -1,0 +1,29 @@
+= form_for @empresa do |f|
+  - if @empresa.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@empresa.errors.count, "error")} prohibited this empresa from being saved:"
+      %ul
+        - @empresa.errors.full_messages.each do |msg|
+          %li= msg
+  .container-form
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        = f.text_field :nombre, :placeholder=>"Nombre", :class=>'input-form'
+    %br/ 
+    .row
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        = f.text_field :rif, :placeholder=>"Rif", :class=>'input-form'
+      %br.visible-xs
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        = f.text_field :direccion, :placeholder=>"Dirección", :class=>'input-form'
+    %br/ 
+    .row
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        = f.text_field :telefono, :placeholder=>"telefono", :class=>'input-form'
+      %br.visible-xs
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        = f.text_field :email, :placeholder=>"Email", :class=>'input-form'
+
+  .modal-footer.footer-login
+    .actions
+      = f.submit 'Guardar Cambios', :class=>'btn btn-app' 

@@ -1,0 +1,109 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "twitter/bootstrap";
+
+
+body{
+	background-color: #F2F2F2;
+	padding-top: 70px;
+}
+
+.navbar-default{
+	background-color: #57DFA9;
+	color:#fff;
+	box-shadow: 0px 2px 1px #c0c0c0;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	color: #555555;
+	background-color: #9EF5D2;
+}
+
+.navbar-default .navbar-brand{
+	color:#ffffff;
+	font-size: 25px;
+	height: 50px;
+	text-shadow:1px 1px 1px #04B486;
+}
+
+.navbar-default .navbar-brand:hover{
+	color:#ffffff;
+	font-size: 25px;
+	height: 50px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: #9EF5D2;
+}
+
+.navbar-default .navbar-toggle {
+	border: 1px solid #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #0B614B;
+}
+
+.btn-app{
+	background-color: #57DFA9;
+	box-shadow: 0px 2px 1px #04B486;
+	color: #ffffff;
+}
+
+.btn-app:hover{
+	background-color: #61F5BA;
+	box-shadow: 0px 2px 1px #088A68;
+	color: #ffffff;
+}
+
+.container-login{
+	background-color: #ffffff;
+	width: 100%;
+	box-shadow: 0px 2px 1px #c0c0c0;
+	/*margin:4em auto;*/
+	/*margin-top: 5%;*/
+	color:#424242;
+}
+
+.container-login-form{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.title-login{
+	background-color: #E9E9E9;
+	padding: 5px;	
+	padding-left: 30px;
+}
+
+.footer-login{
+	background-color: #E9E9E9;
+}
+
+.input-login{
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 2px 1px #c0c0c0;
+	background-color: #F2F2F2;
+	width: 100%;
+	padding: 5px;
+}
+
+.title-home-login{
+	text-shadow: 0px 2px 1px #c0c0c0;
+	color:#57DFA9;
+}
+
+.section-login{
+	background-color: #E9E9E9;
+	padding: 35px;
+	box-shadow: 0px 2px 1px #c0c0c0;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	background-color: #D3F6E7;
+}

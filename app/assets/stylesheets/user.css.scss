@@ -1,0 +1,68 @@
+// Place all the styles related to the User controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-table{
+	width: 100%;
+}
+
+.user-table > thead > tr > th{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background: #f2f2f2;
+}
+
+.user-table > tbody > tr > td{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+.user-table > tbody > tr:hover{
+	background-color: #E0F8EC;
+}
+
+#controles{
+	list-style-type: none;	
+	padding-left: 0px;
+}
+
+#controles > li{
+	padding: 5px;
+}
+
+.footer-login {
+	margin-top: 0px;
+}
+
+#user-container{
+	margin-bottom: 20px;
+}
+
+#user-controls{
+	margin-bottom: 20px;
+}
+
+.btn-control{
+	background-color: #E9E9E9;
+	width: 100%;
+	border-radius: 0px;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #424242;
+}
+
+.btn-control-2{
+	background-color: #E9E9E9;
+	width: 100%;
+	border-radius: 0px;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #424242;
+	margin:0;
+}
+
