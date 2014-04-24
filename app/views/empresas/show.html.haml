@@ -1,4 +1,8 @@
 .container
+  -if notice
+    .alert.alert-success
+      %strong Warning!
+      = notice
   .row
     .col-lg-3.col-md-3.col-sm-4
       .container-login#user-controls
@@ -29,8 +33,7 @@
             Lista de Empresas Clientes
           %h2.visible-xs 
             %i.fa.fa-user
-            Clientes
-        //%p#notice= notice
+            Clientes      
         %table.table-bordered.show-table
           %tr
             %td{style:'background:#E9E9E9;'} 
