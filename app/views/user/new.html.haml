@@ -7,13 +7,8 @@
 					%h3 
 						%i.fa.fa-gear
 						Controles
-				.row
-					.col-md-6.col-sm-6.col-xs-6{style:"padding-right: 0px;"}
-						%center
-							= link_to "<i class='fa fa-home fa-3x'></i>".html_safe, root_path, :class=>"btn btn-control"
-					.col-md-6.col-sm-6.col-xs-6{style:"padding-left: 0px;border-left:1px solid #c0c0c0;"}
-						%center
-							= link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, user_index_path, :class=>"btn btn-control"
+				%center
+					= link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, user_index_path, :class=>"btn btn-control-2"
 							
 				.modal-footer.footer-login
 		.col-lg-9.col-md-9.col-sm-8

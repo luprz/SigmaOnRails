@@ -14,6 +14,7 @@
             %center
               = link_to "<i class='fa fa-plus fa-3x'></i>".html_safe, new_empresa_path, :class=>"btn btn-control"
         .modal-footer.footer-login
+        
     .col-lg-9.col-md-9.col-sm-8
       .container-login#user-container
         .modal-header.title-login
@@ -23,8 +24,11 @@
           %h2.visible-xs 
             %i.fa.fa-user
             Clientes
-
-        %table.table-bordered.user-table
+        .input-group
+          .input-group-addon
+            %i.glyphicon.glyphicon-search
+          %input.form-control{type:'text', placeholder:'Buscar Cliente...', id:"filter"}
+        %table.table-bordered.user-table#table
           %thead 
             %tr 
               %th 
@@ -36,16 +40,49 @@
               %th 
                 Control
           %tbody
-            -@empresas.each do |empresa|
+            - if @empresas.length > 0
+              -@empresas.each do |empresa|
+                %tr{id:'datosTabla'}
+                  %td
+                    = empresa.id
+                  %td
+                    = empresa.nombre
+                  %td.hidden-xs
+                    = empresa.telefono
+                  %td
+                    = link_to "<i class='fa fa-eye fa-2x'></i>".html_safe, empresas_path+"/#{empresa.id}", :class=>"btn btn-table"
+            - else
               %tr
-                %td
-                  = empresa.id
-                %td
-                  = empresa.nombre
-                %td.hidden-xs
-                  = empresa.telefono
-                %td
-                  = link_to "<i class='fa fa-eye fa-2x'></i>".html_safe, empresas_path+"/#{empresa.id}", :class=>"btn btn-table"
+                %td{colspan:'4'}
+                  %center
+                    No hay empresas registradas.
+                  
 
         .modal-footer.footer-login
-    
+
+:javascript
+  var searchOnTable = function() {
+    var table = $('#table');
+    var value = this.value;
+    table.find('tr').each(function(index, row) {
+      var allCells = $(row).find('td');
+      if(allCells.length > 0) {
+        var found = false;
+        allCells.each(function(index, td) {
+          var regExp = new RegExp(value, 'i');
+          if(regExp.test($(td).text())) {
+            found = true;
+            return false;
+          }
+        });
+        if (found == true) 
+          $(row).show();
+        else 
+          $(row).hide();
+      }
+    });
+  };
+
+  $(function(){
+    $('#filter').keyup(searchOnTable);
+  });

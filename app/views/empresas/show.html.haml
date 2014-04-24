@@ -30,23 +30,33 @@
           %h2.visible-xs 
             %i.fa.fa-user
             Clientes
-        %p#notice= notice
-
-        %p
-          %b Nombre:
-          = @empresa.nombre
-        %p
-          %b Rif:
-          = @empresa.rif
-        %p
-          %b Direccion:
-          = @empresa.direccion
-        %p
-          %b Telefono:
-          = @empresa.telefono
-        %p
-          %b Email:
-          = @empresa.email
+        //%p#notice= notice
+        %table.table-bordered.show-table
+          %tr
+            %td{style:'background:#E9E9E9;'} 
+              %b Nombre
+            %td
+              = @empresa.nombre
+          %tr
+            %td{style:'background:#E9E9E9;'} 
+              %b Rif
+            %td
+              = @empresa.rif
+          %tr
+            %td{style:'background:#E9E9E9;'} 
+              %b Direccion
+            %td
+              = @empresa.direccion
+          %tr
+            %td{style:'background:#E9E9E9;'} 
+              %b Telefono
+            %td
+              = @empresa.telefono
+          %tr
+            %td{style:'background:#E9E9E9;'} 
+              %b Email
+            %td
+              = @empresa.email
 
         .modal-footer.footer-login
 
