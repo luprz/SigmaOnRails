@@ -107,3 +107,45 @@ body{
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #D3F6E7;
 }
+
+.section-conf{
+	background-color: #E9E9E9;
+	padding: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	color: #333333;
+	text-decoration: none;
+}
+
+.col-conf{
+	padding: 0px;	
+	border-right: 1px solid #c0c0c0;
+}
+.col-conf-left{
+	padding-left: 15px;
+	padding-right: 0px;
+	border-right: 1px solid #c0c0c0;
+}
+
+.col-conf-right{
+	padding-left: 0px;
+	padding-right: 15px;
+}
+
+.link_conf:hover{	
+	text-decoration: none;
+}
+
+@media (max-width: 760px){
+	#conf-uno{
+		padding-right: 14px;
+	}
+	#conf-dos{
+		padding-left: 15px;
+	}
+
+	.section-conf h3{
+		font-size: 15px;
+	}
+}

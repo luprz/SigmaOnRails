@@ -8,7 +8,7 @@
 				%span.icon-bar
 		%a.navbar-brand
 			%i.fa.fa-calendar
-			SigmaRails 2.0
+			SigmaOnRails
 		%div.visible-xs.navbar-brand
 	#bs-example-navbar-collapse-1.collapse.navbar-collapse
 		- if current_user.respond_to?(:email) && current_user.email.present?
@@ -18,7 +18,7 @@
 				%li{ class: "#{'active' if params[:action] == 'empresas/index'}"}
 					= link_to "<i class='fa fa-building-o'> Clientes</i>".html_safe, empresas_path 
 				%li{ class: "#{'active' if params[:action] == 'user/index'}"}
-					= link_to "<i class='fa fa-cog'> Configuración</i>".html_safe, user_index_path 
+					= link_to "<i class='fa fa-cog'> Configuración</i>".html_safe, config_path 
 			%ul.nav.navbar-nav.navbar-right
 				%li.dropdown
 					%a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
