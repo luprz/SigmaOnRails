@@ -1,0 +1,112 @@
+.container
+  .row
+    .col-lg-3.col-md-3.col-sm-4
+      .container-login#user-controls
+        .modal-header.title-login
+          %h3 
+            %i.fa.fa-gear
+            Equipos
+        .row
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-right: 0px;"}
+            %center              
+              = link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, config_path, :class=>"btn btn-control"              
+          .col-md-6.col-sm-6.col-xs-6{style:"padding-left: 0px;border-left:1px solid #c0c0c0;"}
+            %center
+              = link_to "<i class='fa fa-plus fa-3x'></i>".html_safe, new_equipo_path, :class=>"btn btn-control"
+        .modal-header.title-login
+          %h3 
+            %i.fa.fa-gear
+            Tipo de Equipos
+        %center
+          = link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, tipo_equipos_path, :class=>"btn btn-control-2"
+        .modal-header.title-login
+          %h3 
+            %i.fa.fa-gear
+            Mantenimiento
+        %center
+          = link_to "<i class='fa fa-calendar fa-3x'></i>".html_safe, tipo_equipos_path, :class=>"btn btn-control-2"
+        .modal-footer.footer-login
+        
+    .col-lg-9.col-md-9.col-sm-8
+      .container-login#user-container
+        .modal-header.title-login
+          %h2.hidden-xs 
+            %i.fa.fa-puzzle-piece
+            Lista de Equipos
+          %h2.visible-xs 
+            %i.fa.fa-puzzle-piece
+            Equipos
+        .input-group
+          .input-group-addon
+            %i.glyphicon.glyphicon-search
+          %input.form-control{type:'text', placeholder:'Buscar Cliente...', id:"filter"}
+        %table.table-bordered.user-table#table
+          %thead 
+            %tr 
+              %th 
+                Cod.
+              %th 
+                Nombre
+              %th.hidden-xs 
+                Tipo de Equipos
+              %th.hidden-xs
+                Descripción
+              %th 
+                Control
+          %tbody
+            - if @equipos.length > 0
+              -@equipos.each do |equipo|
+                %tr{id:'datosTabla'}
+                  %td
+                    = equipo.id
+                  %td
+                    = equipo.nombre
+                  %td.hidden-xs
+                    = equipo.tipo_equipo.nombre
+                  %td.hidden-xs
+                    = equipo.descripcion
+                  %td
+                    = link_to "<i class='fa fa-eye fa-2x'></i>".html_safe, equipos_path+"/#{equipo.id}", :class=>"btn btn-table"
+            - else
+              %tr
+                %td{colspan:'4'}
+                  %center
+                    No hay empresas registradas.
+                  
+
+        .modal-footer.footer-login
+
+:javascript
+  var searchOnTable = function() {
+    var table = $('#table');
+    var value = this.value;
+    table.find('tr').each(function(index, row) {
+      var allCells = $(row).find('td');
+      if(allCells.length > 0) {
+        var found = false;
+        allCells.each(function(index, td) {
+          var regExp = new RegExp(value, 'i');
+          if(regExp.test($(td).text())) {
+            found = true;
+            return false;
+          }
+        });
+        if (found == true) 
+          $(row).show();
+        else 
+          $(row).hide();
+      }
+    });
+  };
+
+  $(function(){
+    $('#filter').keyup(searchOnTable);
+  });
+
+
+
+
+
+
+
+

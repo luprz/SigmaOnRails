@@ -1,4 +1,6 @@
 SigmaRails::Application.routes.draw do
+  resources :equipos
+
   resources :tipo_equipos
 
   resources :empresas

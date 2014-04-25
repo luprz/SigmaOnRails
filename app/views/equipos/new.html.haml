@@ -1,0 +1,23 @@
+.container
+	.row
+		.row
+		.col-lg-3.col-md-3.col-sm-4
+			.container-login#user-controls
+				.modal-header.title-login
+					%h3 
+						%i.fa.fa-gear
+						Equipo
+				%center
+					= link_to "<i class='fa fa-list-alt fa-3x'></i>".html_safe, equipos_path, :class=>"btn btn-control-2"		
+							
+				.modal-footer.footer-login
+		.col-lg-9.col-md-9.col-sm-8
+			.container-login#user-container
+				.modal-header.title-login
+					%h2.hidden-xs
+						%i.fa.fa-puzzle-piece
+						Nuevo Equipo
+					%h2.visible-xs 
+						%i.fa.fa-puzzle-piece
+						Nuevo Equipo
+				= render 'form'
